@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Portfolio</title>
+<meta name="description" content="Portfolio of Khan Shafi, a computer engineering student and developer building web applications, embedded systems, and connected IoT prototypes.">
+<title>Khan Shafi | Developer Portfolio</title>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
@@ -111,7 +112,7 @@ body.light .edu-badge { border-color: rgba(0,0,0,0.08); background: rgba(0,0,0,0
 body.light .edu-badge .badge-label { color: rgba(0,0,0,0.35); }
 body.light .edu-badge .badge-value { color: #1a1a1a; }
 body.light #projects { background: #f0ede8; }
-body.light #projects span { color: #1a1a1a; }
+body.light #projects > span { color: #1a1a1a; }
 body.light #contact { background: #e8e4de; }
 body.light #contact span { color: #1a1a1a; }
 body.light .section::before { color: rgba(0,0,0,0.04); }
@@ -910,6 +911,164 @@ body.light .proj-card:hover .proj-stack span {
   background: rgba(5,150,105,0.07);
 }
 
+/* ========== COOKSAFE CASE STUDY ========== */
+.cooksafe-case-study {
+  --cs-bg: #0f0f0f;
+  --cs-surface: rgba(255,255,255,0.035);
+  --cs-surface-raised: #141414;
+  --cs-border: rgba(255,255,255,0.09);
+  --cs-text: var(--white);
+  --cs-muted: #aaa;
+  --cs-accent: var(--green-glow);
+  --cs-accent-strong: var(--green-glow);
+  --cs-accent-rgb: 16,185,129;
+  --cs-on-accent: #05261d;
+  --cs-warning: #ff5d8f;
+  --cs-warning-rgb: 255,93,143;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  margin-top: 84px;
+  padding: clamp(28px, 5vw, 72px);
+  border: 1px solid var(--cs-border);
+  border-radius: 32px;
+  background:
+    radial-gradient(ellipse at 78% 0%, rgba(var(--cs-accent-rgb),0.08), transparent 36%),
+    var(--cs-bg);
+  color: var(--cs-text);
+  box-shadow: 0 32px 90px rgba(0,0,0,0.3);
+}
+body.light .cooksafe-case-study {
+  --cs-bg: #f0ede8;
+  --cs-surface: rgba(0,0,0,0.025);
+  --cs-surface-raised: #e8e4de;
+  --cs-border: rgba(0,0,0,0.09);
+  --cs-text: #1a1a1a;
+  --cs-muted: #555;
+  --cs-accent: #059669;
+  --cs-accent-strong: #064e3b;
+  --cs-accent-rgb: 5,150,105;
+  --cs-on-accent: #fff;
+  --cs-warning: #c43563;
+  --cs-warning-rgb: 196,53,99;
+  box-shadow: 0 24px 50px rgba(0,0,0,0.1);
+}
+.cooksafe-case-study::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  opacity: 0.2;
+  background-image: linear-gradient(rgba(var(--cs-accent-rgb),0.07) 1px, transparent 1px), linear-gradient(90deg, rgba(var(--cs-accent-rgb),0.07) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: linear-gradient(to bottom, black, transparent 75%);
+  pointer-events: none;
+}
+.cs-wrap { max-width: 1180px; margin: 0 auto; }
+.cs-hero { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: clamp(32px, 6vw, 76px); align-items: center; }
+.cs-eyebrow, .cs-overline {
+  color: var(--cs-accent-strong);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+.cs-eyebrow { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-bottom: 20px; }
+.cs-status { display: inline-flex; align-items: center; gap: 8px; padding: 7px 11px; border: 1px solid rgba(var(--cs-accent-rgb),0.35); border-radius: 99px; background: rgba(var(--cs-accent-rgb),0.08); color: var(--cs-accent-strong); letter-spacing: 0.08em; }
+.cs-status::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--cs-accent); }
+.cs-hero h2 { max-width: 720px; margin: 0 0 12px; font-family: 'Bebas Neue', sans-serif; font-size: clamp(3.2rem, 7vw, 6rem); line-height: 0.92; letter-spacing: 0.015em; }
+.cs-hero h2 span { color: var(--cs-accent-strong); }
+.cs-tagline { margin-bottom: 18px; color: var(--cs-text); font-size: clamp(1.2rem, 2.5vw, 1.7rem); font-weight: 500; }
+.cs-intro { max-width: 590px; color: var(--cs-muted); font-size: 1rem; line-height: 1.75; }
+.cs-meta { margin-top: 22px; color: var(--cs-muted); font-size: 0.88rem; line-height: 1.8; }
+.cs-meta strong { color: var(--cs-text); font-weight: 500; }
+.cs-badges { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 22px; }
+.cs-badge { padding: 7px 11px; border: 1px solid var(--cs-border); border-radius: 99px; background: var(--cs-surface); color: var(--cs-text); font-size: 0.75rem; }
+.cs-project-note { color: var(--cs-muted); font-size: 0.72rem; line-height: 1.5; }
+body.light .proj-card .cs-project-note { color: #555; }
+.cs-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 26px; }
+.cs-action { display: inline-flex; min-height: 46px; align-items: center; justify-content: center; gap: 9px; padding: 0 17px; border: 1px solid var(--cs-accent); border-radius: 12px; background: var(--cs-accent-strong); color: var(--cs-on-accent); font-size: 0.85rem; font-weight: 700; text-decoration: none; transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease; }
+.cs-action:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(var(--cs-accent-rgb),0.2); }
+.cs-action:focus-visible, .cs-case-link:focus-visible { outline: 3px solid var(--cs-accent); outline-offset: 4px; }
+.cs-visuals { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+.cs-visual-frame { min-width: 0; padding: 12px; border: 1px solid var(--cs-border); border-radius: 22px; background: var(--cs-surface); }
+.cs-visual-frame--featured { grid-column: 1 / -1; }
+.cs-hardware-image { display: block; width: 100%; height: auto; border-radius: 13px; }
+.cs-visual-caption { width: 100%; margin-top: 12px; color: var(--cs-muted); font-size: 0.72rem; letter-spacing: 0.04em; text-align: left; }
+.cs-section { margin-top: clamp(58px, 8vw, 100px); scroll-margin-top: 100px; }
+.cs-section-head { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 18px; margin-bottom: 24px; }
+.cs-section-head h3 { margin-top: 8px; font-family: 'Bebas Neue', sans-serif; font-size: clamp(2rem, 4vw, 3.5rem); font-weight: 400; letter-spacing: 0.03em; }
+.cs-section-head p { max-width: 560px; color: var(--cs-muted); font-size: 0.9rem; line-height: 1.65; }
+.cs-architecture { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }
+.cs-layer, .cs-component, .cs-contribution, .cs-challenge, .cs-roadmap-item, .cs-screen {
+  border: 1px solid var(--cs-border);
+  border-radius: 17px;
+  background: var(--cs-surface);
+}
+.cs-layer { position: relative; min-height: 190px; padding: 20px; }
+.cs-layer:not(:last-child)::after { content: "→"; position: absolute; top: 50%; right: -17px; z-index: 2; width: 20px; color: var(--cs-accent); font-size: 1.2rem; text-align: center; transform: translateY(-50%); }
+.cs-layer-index { color: var(--cs-accent-strong); font: 0.72rem 'DM Sans', sans-serif; letter-spacing: 0.12em; }
+.cs-layer h4, .cs-component h4, .cs-screen h4 { margin: 12px 0 8px; color: var(--cs-text); font-size: 1rem; }
+.cs-layer p, .cs-component p, .cs-screen p { color: var(--cs-muted); font-size: 0.82rem; line-height: 1.65; }
+.cs-layer-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 14px; }
+.cs-layer-tags span { padding: 5px 8px; border-radius: 7px; background: rgba(var(--cs-accent-rgb),0.08); color: var(--cs-text); font-size: 0.68rem; }
+.cs-flow-note { margin-top: 18px; padding: 14px 17px; border-left: 3px solid var(--cs-accent); border-radius: 0 12px 12px 0; background: rgba(var(--cs-accent-rgb),0.07); color: var(--cs-text); font-size: 0.86rem; line-height: 1.65; }
+.cs-flow-note strong { color: var(--cs-accent-strong); }
+.cs-component-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+.cs-component { padding: 18px; }
+.cs-component-index { color: var(--cs-accent-strong); font-size: 0.68rem; font-weight: 600; letter-spacing: 0.12em; }
+.cs-component-icon { width: 30px; height: 30px; margin-top: 12px; color: var(--cs-accent); }
+.cs-component-icon svg { display: block; width: 100%; height: 100%; }
+.cs-component h4 { margin-top: 10px; }
+.cs-optional { color: var(--cs-warning); font-size: 0.68rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; }
+.cs-app-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+.cs-screen { min-width: 0; padding: 17px; }
+.cs-screen-label { color: var(--cs-accent-strong); font-size: 0.68rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; }
+.cs-screen-image-frame { width: min(100%, 270px); aspect-ratio: 9 / 19; margin: 16px auto; overflow: hidden; border: 1px solid var(--cs-border); border-radius: 14px; background: var(--cs-surface-raised); }
+.cs-screen-image { display: block; width: 100%; height: 100%; object-fit: contain; }
+.cs-collab-note { margin-top: 16px; color: var(--cs-muted); font-size: 0.83rem; line-height: 1.65; }
+.cs-contribution-grid, .cs-challenge-grid, .cs-roadmap-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.cs-contribution, .cs-challenge, .cs-roadmap-item { padding: 17px 18px; color: var(--cs-text); font-size: 0.87rem; line-height: 1.6; }
+.cs-contribution::before { content: "01 /"; display: block; margin-bottom: 7px; color: var(--cs-accent-strong); font-size: 0.68rem; letter-spacing: 0.1em; }
+.cs-contribution:nth-child(2)::before { content: "02 /"; }
+.cs-contribution:nth-child(3)::before { content: "03 /"; }
+.cs-contribution:nth-child(4)::before { content: "04 /"; }
+.cs-contribution:nth-child(5)::before { content: "05 /"; }
+.cs-contribution:nth-child(6)::before { content: "06 /"; }
+.cs-contribution:nth-child(7)::before { content: "07 /"; }
+.cs-challenge { display: flex; gap: 12px; }
+.cs-challenge::before { content: ""; width: 8px; height: 8px; flex: 0 0 8px; margin-top: 7px; border-radius: 50%; background: var(--cs-warning); box-shadow: 0 0 16px rgba(var(--cs-warning-rgb),0.35); }
+.cs-timeline { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 10px; }
+.cs-timeline-step { position: relative; min-height: 118px; padding: 15px 13px; border-top: 1px solid rgba(var(--cs-accent-rgb),0.4); background: linear-gradient(180deg, rgba(var(--cs-accent-rgb),0.06), transparent); }
+.cs-timeline-step::before { content: ""; position: absolute; top: -4px; left: 14px; width: 7px; height: 7px; border-radius: 50%; background: var(--cs-accent); }
+.cs-timeline-step strong { display: block; margin-top: 7px; color: var(--cs-text); font-size: 0.8rem; line-height: 1.4; }
+.cs-timeline-step span { display: block; margin-top: 7px; color: var(--cs-muted); font-size: 0.7rem; line-height: 1.5; }
+.cs-timeline-step--current { border-top-color: var(--cs-warning); background: linear-gradient(180deg, rgba(var(--cs-warning-rgb),0.09), transparent); }
+.cs-timeline-step--current::before { background: var(--cs-warning); }
+.cs-timeline-step--future { border-top-style: dashed; opacity: 0.78; }
+.cs-roadmap-item { display: flex; gap: 11px; align-items: flex-start; }
+.cs-roadmap-item::before { content: "+"; color: var(--cs-accent-strong); font-size: 1.1rem; line-height: 1.1; }
+.cs-disclaimer { margin-top: 28px; padding: 16px 18px; border: 1px solid rgba(var(--cs-warning-rgb),0.28); border-radius: 13px; background: rgba(var(--cs-warning-rgb),0.07); color: var(--cs-text); font-size: 0.82rem; line-height: 1.65; }
+.cs-disclaimer strong { color: var(--cs-warning); }
+.cs-case-link { color: var(--cs-accent-strong); text-decoration: underline; text-underline-offset: 3px; }
+@media (max-width: 900px) {
+  .cs-hero { grid-template-columns: 1fr; }
+  .cs-architecture { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .cs-layer:not(:last-child)::after { display: none; }
+  .cs-timeline { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+@media (max-width: 600px) {
+  .cooksafe-case-study { margin-top: 52px; padding: 24px 17px; border-radius: 22px; }
+  .cs-visuals, .cs-architecture, .cs-component-grid, .cs-app-grid, .cs-contribution-grid, .cs-challenge-grid, .cs-roadmap-grid { grid-template-columns: 1fr; }
+  .cs-visual-frame--featured { grid-column: auto; }
+  .cs-layer { min-height: 0; }
+  .cs-timeline { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .cs-visual-frame { min-height: 210px; padding: 14px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .cooksafe-case-study *, .cooksafe-case-study *::before, .cooksafe-case-study *::after { scroll-behavior: auto !important; transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; }
+}
+
 /* ========== PROJECT BUTTONS ========== */
 .proj-actions {
   display: flex;
@@ -1397,6 +1556,7 @@ body.light .back-to-top:hover {
   <a href="#about" class="mob-link">Intro</a>
   <a href="#skills" class="mob-link">Skills</a>
   <a href="#education" class="mob-link">Education</a>
+  <a href="#projects" class="mob-link">Projects</a>
   <a href="#contact" class="mob-link">Contact</a>
 </div>
 
@@ -1408,6 +1568,7 @@ body.light .back-to-top:hover {
       <li><a href="#about">Intro</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#education">Education</a></li>
+      <li><a href="#projects">Projects</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
     <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
@@ -1502,8 +1663,8 @@ body.light .back-to-top:hover {
   <div class="skills-container">
     <div class="skill-card reveal-scale">
       <h2>Frontend</h2>
-      <div class="skill-list"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
-      <p>Building responsive and interactive user interfaces with clean design.</p>
+      <div class="skill-list"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Front-End Development</span><span>Web Design</span><span>Responsive Web Design</span><span>Mobile Web Design</span><span>Web Applications</span></div>
+      <p>Building responsive web applications and user interfaces with clean design.</p>
     </div>
     <div class="skill-card reveal-scale">
       <h2>Programming</h2>
@@ -1512,18 +1673,23 @@ body.light .back-to-top:hover {
     </div>
     <div class="skill-card reveal-scale">
       <h2>Hardware & IoT</h2>
-      <div class="skill-list"><span>Arduino</span><span>Sensors</span><span>Embedded Logic</span></div>
-      <p>Experience building real-world projects using microcontrollers.</p>
+      <div class="skill-list"><span>Arduino</span><span>Arduino IDE</span><span>Sensors</span><span>Embedded Systems</span><span>Embedded Logic</span><span>Internet of Things (IoT)</span><span>Electronic Circuit Design</span><span>PCB Design</span><span>PCB Assembly</span></div>
+      <p>Working with microcontrollers, connected devices, electronics, and board-level assembly.</p>
     </div>
     <div class="skill-card reveal-scale">
-      <h2>Tools & Workflow</h2>
-      <div class="skill-list"><span>Git</span><span>GitHub</span><span>VS Code</span><span>Chrome DevTools</span></div>
-      <p>Comfortable with version control, debugging, and modern development workflow.</p>
+      <h2>Android Development</h2>
+      <div class="skill-list"><span>Kotlin</span><span>Android</span><span>Android SDK</span><span>Android Studio</span><span>XML</span><span>Mobile Platforms</span><span>Mobile App Development</span><span>Mobile Product Development</span></div>
+      <p>Building Android applications and mobile product experiences.</p>
     </div>
     <div class="skill-card reveal-scale">
-      <h2>Concepts</h2>
-      <div class="skill-list"><span>Responsive Design</span><span>DOM Manipulation</span><span>Event Handling</span><span>OOP</span></div>
-      <p>Understanding of core development concepts used in real-world applications.</p>
+      <h2>Tools & Software</h2>
+      <div class="skill-list"><span>Git</span><span>GitHub</span><span>VS Code</span><span>Chrome DevTools</span><span>Full-Stack Development</span><span>Software Design</span><span>Software Development</span></div>
+      <p>Using development tools and software practices across front-end and full-stack work.</p>
+    </div>
+    <div class="skill-card reveal-scale">
+      <h2>Concepts & Communication</h2>
+      <div class="skill-list"><span>DOM Manipulation</span><span>Event Handling</span><span>OOP</span><span>Problem Solving</span><span>Presentation Skills</span><span>Technology Research</span></div>
+      <p>Applying core engineering concepts, communicating project work, and exploring new technologies.</p>
     </div>
   </div>
 </section>
@@ -1547,7 +1713,13 @@ body.light .back-to-top:hover {
         </div>
         <div class="edu-badge">
           <div>
-            <div class="badge-label">Sem II SGPA</div>
+            <div class="badge-label">Sem II CGPA</div>
+            <div class="badge-value">8.91</div>
+          </div>
+        </div>
+        <div class="edu-badge">
+          <div>
+            <div class="badge-label">Sem III CGPA</div>
             <div class="badge-value">N/A</div>
           </div>
         </div>
@@ -1626,6 +1798,12 @@ body.light .back-to-top:hover {
         <p class="proj-desc">A pixel-faithful frontend clone of Amazon's homepage and product listing UI, built with HTML &amp; CSS.</p>
         <div class="proj-stack"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
         <div class="proj-actions">
+          <a href="https://github.com/KhanShafi5433/AmazingAmazon" class="proj-btn" target="_blank" aria-label="View Source Code">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+            </svg>
+            Source Code
+          </a>
           <a href="https://khanshafi5433.github.io/AmazingAmazon/" class="proj-btn" target="_blank" aria-label="View Live Demo">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
@@ -1634,7 +1812,6 @@ body.light .back-to-top:hover {
             </svg>
             Live Demo
           </a>
-          <!-- TODO: Replace with actual Source Code URL if available -->
         </div>
       </div>
       <div class="proj-line"></div>
@@ -1649,18 +1826,6 @@ body.light .back-to-top:hover {
         <h2 class="proj-name">Calculator</h2>
         <p class="proj-desc">A clean, functional calculator with keyboard support, chained operations, and smooth button interactions.</p>
         <div class="proj-stack"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
-        <div class="proj-actions">
-          <!-- TODO: Replace with actual Live Demo URL -->
-          <a href="#" class="proj-btn" target="_blank" aria-label="View Live Demo">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
-              <polyline points="15 3 21 3 21 9"/>
-              <line x1="10" y1="14" x2="21" y2="3"/>
-            </svg>
-            Live Demo
-          </a>
-          <!-- TODO: Replace with actual Source Code URL if available -->
-        </div>
       </div>
       <div class="proj-line"></div>
     </div>
@@ -1675,6 +1840,12 @@ body.light .back-to-top:hover {
         <p class="proj-desc">Basic UI clone of Netflix's landing page and browse screen — responsive layout with styled cards and hero banner.</p>
         <div class="proj-stack"><span>HTML</span><span>CSS</span></div>
         <div class="proj-actions">
+          <a href="https://github.com/KhanShafi5433/MoviesHub" class="proj-btn" target="_blank" aria-label="View Source Code">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+            </svg>
+            Source Code
+          </a>
           <a href="https://khanshafi5433.github.io/MoviesHub/" class="proj-btn" target="_blank" aria-label="View Live Demo">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
@@ -1683,7 +1854,6 @@ body.light .back-to-top:hover {
             </svg>
             Live Demo
           </a>
-          <!-- TODO: Replace with actual Source Code URL if available -->
         </div>
       </div>
       <div class="proj-line"></div>
@@ -1699,6 +1869,12 @@ body.light .back-to-top:hover {
         <p class="proj-desc">Spotify's UI recreated with a functional sidebar, music card grid, and playback bar — fully responsive.</p>
         <div class="proj-stack"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
         <div class="proj-actions">
+          <a href="https://github.com/KhanShafi5433/CloneMusic" class="proj-btn" target="_blank" aria-label="View Source Code">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+            </svg>
+            Source Code
+          </a>
           <a href="https://khanshafi5433.github.io/CloneMusic/" class="proj-btn" target="_blank" aria-label="View Live Demo">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
@@ -1707,7 +1883,6 @@ body.light .back-to-top:hover {
             </svg>
             Live Demo
           </a>
-          <!-- TODO: Replace with actual Source Code URL if available -->
         </div>
       </div>
       <div class="proj-line"></div>
@@ -1723,6 +1898,12 @@ body.light .back-to-top:hover {
         <p class="proj-desc">A digital election management platform integrated with Google Sheets for live vote recording and result tracking — eliminating manual tallying errors.</p>
         <div class="proj-stack"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Google Sheets API</span><span>Apps Script</span></div>
         <div class="proj-actions">
+          <a href="https://github.com/KhanShafi5433/e-vote-realtime-system" class="proj-btn" target="_blank" aria-label="View Source Code">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+            </svg>
+            Source Code
+          </a>
           <a href="https://khanshafi5433.github.io/e-vote-realtime-system/" class="proj-btn" target="_blank" aria-label="View Live Demo">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
@@ -1731,7 +1912,6 @@ body.light .back-to-top:hover {
             </svg>
             Live Demo
           </a>
-          <!-- TODO: Replace with actual Source Code URL if available -->
         </div>
       </div>
       <div class="proj-line"></div>
@@ -1746,18 +1926,6 @@ body.light .back-to-top:hover {
         <h2 class="proj-name">Automated Gas Regulation System</h2>
         <p class="proj-desc">Arduino-based IoT system that monitors gas levels via sensors, automatically cuts the valve on detection, and fires an SMS alert to the owner in real time.</p>
         <div class="proj-stack"><span>Arduino</span><span>C++</span><span>Gas Sensor</span><span>GSM Module</span><span>Relay</span></div>
-        <div class="proj-actions">
-          <!-- TODO: Replace with actual Live Demo URL (hardware project) -->
-          <a href="#" class="proj-btn" target="_blank" aria-label="View Live Demo">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
-              <polyline points="15 3 21 3 21 9"/>
-              <line x1="10" y1="14" x2="21" y2="3"/>
-            </svg>
-            Live Demo
-          </a>
-          <!-- TODO: Replace with actual Source Code URL if available -->
-        </div>
       </div>
       <div class="proj-line"></div>
     </div>
@@ -1772,6 +1940,12 @@ body.light .back-to-top:hover {
         <p class="proj-desc">A fully playable browser recreation of Flappy Bird — smooth canvas-based animation, collision detection, score tracking, and a pixel-art aesthetic. Tap or press Space to fly.</p>
         <div class="proj-stack"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Canvas API</span></div>
         <div class="proj-actions">
+          <a href="https://github.com/KhanShafi5433/Flappy-Bird" class="proj-btn" target="_blank" aria-label="View Source Code">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+            </svg>
+            Source Code
+          </a>
           <a href="https://khanshafi5433.github.io/Flappy-Bird/" class="proj-btn" target="_blank" aria-label="View Live Demo">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
@@ -1780,7 +1954,6 @@ body.light .back-to-top:hover {
             </svg>
             Live Demo
           </a>
-          <!-- TODO: Replace with actual Source Code URL if available -->
         </div>
       </div>
       <div class="proj-line"></div>
@@ -1822,7 +1995,212 @@ body.light .back-to-top:hover {
       <div class="proj-line"></div>
     </div>
 
+    <article class="proj-card proj-card--wide reveal-scale" data-tag="IoT • Embedded • Android">
+      <div class="proj-card-inner">
+        <div class="proj-top">
+          <div class="proj-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 3 21 7.5v9L12 21l-9-4.5v-9L12 3Z"/><path d="M12 12 3.2 7.6M12 12l8.8-4.4M12 12v9"/>
+              <circle cx="12" cy="12" r="2.2"/>
+            </svg>
+          </div>
+          <div class="proj-tag">IoT • Embedded • Android</div>
+        </div>
+        <h2 class="proj-name">CookSafe – LPG Guard</h2>
+        <p class="proj-desc">A connected LPG-safety prototype combining gas and flame sensing, local alerts, servo-based shut-off, and an Android monitoring concept. Under development; not a certified safety product.</p>
+        <div class="proj-stack"><span>ESP32</span><span>MQ-6</span><span>Kotlin</span><span>Firebase</span></div>
+        <div class="proj-actions">
+          <a href="#cooksafe-case-study" class="proj-btn" aria-label="Explore the CookSafe project case study">
+            Explore Case Study <span aria-hidden="true">→</span>
+          </a>
+        </div>
+      </div>
+      <div class="proj-line"></div>
+    </article>
+
+    <article class="proj-card proj-card--wide reveal-scale" data-tag="Full Stack • Healthcare">
+      <div class="proj-card-inner">
+        <div class="proj-top">
+          <div class="proj-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 21s-8-4.5-8-11a4.5 4.5 0 0 1 8-2.9A4.5 4.5 0 0 1 20 10c0 6.5-8 11-8 11Z"/><path d="M12 8v8M8 12h8"/>
+            </svg>
+          </div>
+          <div class="proj-tag">Full Stack • Healthcare</div>
+        </div>
+        <h2 class="proj-name">MediCoreEnrollHub</h2>
+        <p class="proj-desc">An MBBS consultancy platform for Jalal-Abad State University, Kyrgyzstan, designed to help students apply, manage documents, track application status, and communicate with the consultancy team. The admin workflow supports application review, document verification, analytics, and communication.</p>
+        <div class="proj-stack"><span>React</span><span>Vite</span><span>Tailwind CSS</span><span>React Router</span><span>Node.js</span><span>Express</span><span>MongoDB Atlas</span><span>Mongoose</span><span>Socket.io</span><span>JWT</span><span>Cloudinary</span><span>Nodemailer</span></div>
+        <div class="proj-actions">
+          <a href="https://github.com/khan-shafi5433/MediCoreEnrollHub" class="proj-btn" target="_blank" rel="noopener noreferrer" aria-label="View MediCoreEnrollHub source code">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+            </svg>
+            Source Code
+          </a>
+          <span class="cs-project-note">Demo not uploaded (hosting credits)</span>
+        </div>
+        <p class="cs-project-note">Previously named JASU Consultancy; renamed to MediCoreEnrollHub following copyright concerns.</p>
+      </div>
+      <div class="proj-line"></div>
+    </article>
+
   </div>
+
+  <section id="cooksafe-case-study" class="cooksafe-case-study" aria-labelledby="cooksafe-title">
+    <div class="cs-wrap">
+      <header class="cs-hero">
+        <div>
+          <div class="cs-eyebrow">Connected hardware case study <span class="cs-status">Working prototype · under development</span></div>
+          <h2 id="cooksafe-title">CookSafe <span>– LPG Guard</span></h2>
+          <p class="cs-tagline">Be Safe. Cook Safe.</p>
+          <p class="cs-intro">A connected LPG safety prototype that monitors for gas leaks and flame hazards, raises local alerts, and can command a servo-based regulator shut-off. An Android companion is being developed for remote monitoring and valve control through Firebase Realtime Database.</p>
+          <p class="cs-meta"><strong>Category:</strong> IoT · Embedded Systems · Android · Hardware + Software<br><strong>Team:</strong> RoboNova &nbsp;·&nbsp; <strong>My role:</strong> Team Leader, Embedded Systems &amp; Software Developer</p>
+          <div class="cs-badges" aria-label="CookSafe technologies">
+            <span class="cs-badge">ESP32</span><span class="cs-badge">MQ-6</span><span class="cs-badge">Flame sensor</span><span class="cs-badge">Firebase</span><span class="cs-badge">Kotlin</span><span class="cs-badge">Jetpack Compose</span>
+          </div>
+          <div class="cs-actions">
+            <a class="cs-action" href="#cooksafe-architecture">Explore Project <span aria-hidden="true">↓</span></a>
+          </div>
+        </div>
+        <div class="cs-visuals" aria-label="CookSafe prototype and enclosure visuals">
+          <figure class="cs-visual-frame cs-visual-frame--featured">
+            <img class="cs-hardware-image" src="prototype.png" width="513" height="452" alt="CookSafe prototype circuit board with ESP32, batteries, indicator LEDs, OLED, and wiring" fetchpriority="high">
+            <figcaption class="cs-visual-caption">Working hardware prototype · board assembly</figcaption>
+          </figure>
+          <figure class="cs-visual-frame">
+            <img class="cs-hardware-image" src="enclosure1.png" width="418" height="607" alt="CookSafe enclosure concept showing front controls and status indicators" loading="lazy" decoding="async">
+            <figcaption class="cs-visual-caption">Enclosure 1 · front concept</figcaption>
+          </figure>
+          <figure class="cs-visual-frame">
+            <img class="cs-hardware-image" src="enclosure2.png" width="417" height="612" alt="CookSafe enclosure concept showing gas sensor, flame sensor, and servo coupling" loading="lazy" decoding="async">
+            <figcaption class="cs-visual-caption">Enclosure 2 · sensor and actuator concept</figcaption>
+          </figure>
+        </div>
+      </header>
+
+      <section id="cooksafe-architecture" class="cs-section" aria-labelledby="cs-architecture-title">
+        <div class="cs-section-head">
+          <div><span class="cs-overline">01 / System architecture</span><h3 id="cs-architecture-title">From sensor to screen</h3></div>
+          <p>Telemetry and commands connect the device and app. Essential detection, local alerting, and shut-off logic is designed to work without an internet connection.</p>
+        </div>
+        <div class="cs-architecture" aria-label="CookSafe system architecture, from hardware through firmware and cloud to the Android application">
+          <article class="cs-layer"><span class="cs-layer-index">LAYER 01</span><h4>Hardware</h4><p>Physical sensing, control, and user feedback at the device.</p><div class="cs-layer-tags"><span>MQ-6</span><span>Flame sensor</span><span>Servo</span><span>ESP32</span></div></article>
+          <article class="cs-layer"><span class="cs-layer-index">LAYER 02</span><h4>Firmware</h4><p>Samples sensors, evaluates hazards, drives local alarms and valve-control logic.</p><div class="cs-layer-tags"><span>Arduino framework</span><span>Local logic</span><span>Wi-Fi</span></div></article>
+          <article class="cs-layer"><span class="cs-layer-index">LAYER 03</span><h4>Cloud</h4><p>Firebase services provide authentication, device telemetry, and command exchange.</p><div class="cs-layer-tags"><span>Firebase Auth</span><span>Realtime Database</span></div></article>
+          <article class="cs-layer"><span class="cs-layer-index">LAYER 04</span><h4>Android app</h4><p>Device pairing, monitoring dashboard, status views, and remote command workflow.</p><div class="cs-layer-tags"><span>Kotlin</span><span>Jetpack Compose</span><span>Device control</span></div></article>
+        </div>
+        <div class="cs-flow-note"><strong>System flow:</strong> Gas / Flame Sensors → ESP32 → Hazard Evaluation → Local Alarm + Servo Valve Closure → Firebase Telemetry → Android App</div>
+      </section>
+
+      <section class="cs-section" aria-labelledby="cs-hardware-title">
+        <div class="cs-section-head">
+          <div><span class="cs-overline">02 / Hardware engineering</span><h3 id="cs-hardware-title">The physical system</h3></div>
+          <p>Component roles in the current prototype design. Calibration, integration, mechanical fit, and power behavior remain active engineering work.</p>
+        </div>
+        <div class="cs-component-grid">
+          <article class="cs-component"><span class="cs-component-index">01 · CONTROL</span><div class="cs-component-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2v4m6-4v4m-6 12v4m6-4v4M2 9h4m-4 6h4m12-6h4m-4 6h4"/></svg></div><h4>ESP32 DevKit</h4><p>Main microcontroller for sensor sampling, local decisions, and Wi-Fi connectivity.</p></article>
+          <article class="cs-component"><span class="cs-component-index">02 · GAS SENSING</span><div class="cs-component-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3v3m-7 3 2 2m10-2 2-2M4 15h3m10 0h3"/><circle cx="12" cy="14" r="5"/><path d="M10 14h4m-2-2v4"/></svg></div><h4>MQ-6 gas sensor</h4><p>Provides a signal used to detect possible LPG presence; readings require calibration and validation.</p></article>
+          <article class="cs-component"><span class="cs-component-index">03 · FLAME SENSING</span><div class="cs-component-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22a7 7 0 0 0 7-7c0-4-3-6-4-10-2 2-2 4-2 5-2-2-3-4-3-7-3 3-5 7-5 11a7 7 0 0 0 7 8Z"/><path d="M12 19a3 3 0 0 0 3-3c0-1.4-.8-2.3-1.7-3.3-.4 1.2-1 1.7-1.5 2-.4-.7-.8-1.1-1.2-1.5A4.3 4.3 0 0 0 9 16a3 3 0 0 0 3 3Z"/></svg></div><h4>Flame sensor</h4><p>Provides a flame-hazard input to the device's hazard-evaluation logic.</p></article>
+          <article class="cs-component"><span class="cs-component-index">04 · ACTUATION</span><div class="cs-component-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3v8m0 0 6-4m-6 4-6-4"/><circle cx="12" cy="15" r="6"/><path d="M10 15h4"/></svg></div><h4>Servo motor</h4><p>Drives a mechanical regulator shut-off mechanism; actuation depends on alignment and adequate power.</p></article>
+          <article class="cs-component"><span class="cs-component-index">05 · LOCAL ALERT</span><div class="cs-component-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 10v4h4l5 4V6l-5 4H4Zm13-1a5 5 0 0 1 0 6m2-9a9 9 0 0 1 0 12"/></svg></div><h4>Buzzer + status LEDs</h4><p>Buzzer for audible alerts; red/green LEDs for hazard/safe indication and blue LED for Wi-Fi status.</p></article>
+          <article class="cs-component"><span class="cs-component-index">06 · INPUT</span><div class="cs-component-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="5" width="16" height="14" rx="3"/><circle cx="9" cy="12" r="2"/><path d="M15 10h2m-2 4h2"/></svg></div><h4>Physical buttons</h4><p>Manual emergency shut-off, Wi-Fi setup, and reset controls for device operation.</p></article>
+          <article class="cs-component"><span class="cs-component-index">07 · POWER</span><div class="cs-component-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="7" width="17" height="10" rx="2"/><path d="M20 10h2v4h-2m-12-5-2 4h3l-1 3 4-5h-3l1-2"/></svg></div><h4>Power subsystem</h4><p>Rechargeable battery arrangement and voltage regulation for stable operation of the controller and servo.</p></article>
+          <article class="cs-component"><span class="cs-component-index">08 · DISPLAY</span><div class="cs-component-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 21h8m-4-3v3m-5-12h10m-10 4h6"/></svg></div><h4>OLED display <span class="cs-optional">Optional · if fitted</span></h4><p>Local readings or status display only if an OLED is present in the showcased hardware build.</p></article>
+          <article class="cs-component"><span class="cs-component-index">09 · INTEGRATION</span><div class="cs-component-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M8 8h3v3H8zm5 5h3v3h-3zM11 9h2m-2 6h2m1-3v2m-7-1h2"/></svg></div><h4>Assembly &amp; PCB</h4><p>Sensor wiring, soldering, and board-level implementation as the prototype evolves.</p></article>
+        </div>
+      </section>
+
+      <section class="cs-section" aria-labelledby="cs-app-title">
+        <div class="cs-section-head">
+          <div><span class="cs-overline">03 / Software &amp; Android</span><h3 id="cs-app-title">A companion app in progress</h3></div>
+          <p>The supplied dashboard, diagnostics, and valve-control screens are shown in consistent portrait frames. Displayed readings and status are part of the screenshots and do not imply validated live device data.</p>
+        </div>
+        <div class="cs-app-grid">
+          <article class="cs-screen">
+            <span class="cs-screen-label">App screen · Dashboard</span>
+            <div class="cs-screen-image-frame"><img class="cs-screen-image" src="screen1.png" width="455" height="907" alt="CookSafe Android app dashboard with gas reading, flame sensor, gas supply and device link status" loading="lazy" decoding="async"></div>
+            <h4>Dashboard</h4><p>Overview of gas reading, sensor and connection status.</p>
+          </article>
+          <article class="cs-screen">
+            <span class="cs-screen-label">App screen · Diagnostics</span>
+            <div class="cs-screen-image-frame"><img class="cs-screen-image" src="screen2.png" width="421" height="900" alt="CookSafe Android sensor diagnostics screen showing gas concentration, flame detection, and valve status" loading="lazy" decoding="async"></div>
+            <h4>Sensor diagnostics</h4><p>Detailed sensor readings and current device telemetry UI.</p>
+          </article>
+          <article class="cs-screen">
+            <span class="cs-screen-label">App screen · Valve control</span>
+            <div class="cs-screen-image-frame"><img class="cs-screen-image" src="screen3.png" width="392" height="847" alt="CookSafe Android gas supply control screen with valve status and a confirmation prompt" loading="lazy" decoding="async"></div>
+            <h4>Gas supply control</h4><p>Valve state and confirmation UI for a gas supply command.</p>
+          </article>
+        </div>
+        <p class="cs-collab-note"><strong>Technology:</strong> Kotlin, Jetpack Compose, Firebase Realtime Database, Firebase Authentication, and ESP32 firmware using the Arduino framework. The Android app includes planned/implemented work for live readings, flame and gas status, valve status, Wi-Fi connectivity, pairing, and remote commands; this case study does not imply that every feature is complete.</p>
+      </section>
+
+      <section class="cs-section" aria-labelledby="cs-built-title">
+        <div class="cs-section-head">
+          <div><span class="cs-overline">04 / Individual contribution</span><h3 id="cs-built-title">What I Built</h3></div>
+          <p>My role spans team coordination, embedded engineering, and the software integration work.</p>
+        </div>
+        <div class="cs-contribution-grid">
+          <div class="cs-contribution">Led RoboNova and coordinated development across the team.</div>
+          <div class="cs-contribution">Developed and iterated on ESP32 firmware.</div>
+          <div class="cs-contribution">Worked on sensor integration and emergency shut-off logic.</div>
+          <div class="cs-contribution">Worked on hardware assembly, soldering, and PCB-level implementation.</div>
+          <div class="cs-contribution">Developed the Android application and Firebase monitoring workflow.</div>
+          <div class="cs-contribution">Prepared project presentations, demonstrations, and technical documentation.</div>
+          <div class="cs-contribution">Worked on evolving the prototype toward a more practical product design.</div>
+        </div>
+        <p class="cs-collab-note">CookSafe is a team project. The points above describe my contributions; design, integration, and prototype progress are collaborative work by RoboNova.</p>
+      </section>
+
+      <section class="cs-section" aria-labelledby="cs-challenges-title">
+        <div class="cs-section-head">
+          <div><span class="cs-overline">05 / Engineering work</span><h3 id="cs-challenges-title">Problems we’re working through</h3></div>
+          <p>These are ongoing engineering considerations, not claims of solved or production-validated behavior.</p>
+        </div>
+        <div class="cs-challenge-grid">
+          <div class="cs-challenge">Sensor calibration and reducing false positives across operating conditions.</div>
+          <div class="cs-challenge">Servo current demand, voltage stability, and safe power delivery during actuation.</div>
+          <div class="cs-challenge">Battery management and regulated power for the complete device.</div>
+          <div class="cs-challenge">Reliable device pairing and cloud communication.</div>
+          <div class="cs-challenge">Keeping local hazard logic available during Wi-Fi or cloud outages.</div>
+          <div class="cs-challenge">Mechanical alignment and repeatable regulator actuation.</div>
+        </div>
+      </section>
+
+      <section class="cs-section" aria-labelledby="cs-status-title">
+        <div class="cs-section-head">
+          <div><span class="cs-overline">06 / Progress</span><h3 id="cs-status-title">Prototype development</h3></div>
+          <p>Progression from concept through integration, testing, and future product exploration. No dates or performance results are implied.</p>
+        </div>
+        <div class="cs-timeline" aria-label="Project progression: concept, hardware prototype, firmware, Android integration, testing and iteration in progress, future product development">
+          <div class="cs-timeline-step"><strong>Concept</strong><span>Safety workflow and system direction</span></div>
+          <div class="cs-timeline-step"><strong>Hardware prototype</strong><span>Sensor, controller, and actuation build</span></div>
+          <div class="cs-timeline-step"><strong>Firmware development</strong><span>Sampling and local hazard logic</span></div>
+          <div class="cs-timeline-step"><strong>Android integration</strong><span>App and Firebase workflow</span></div>
+          <div class="cs-timeline-step cs-timeline-step--current"><strong>Testing &amp; iteration · current</strong><span>Prototype remains under development</span></div>
+          <div class="cs-timeline-step cs-timeline-step--future"><strong>Future product development</strong><span>Goal; not a completed deployment</span></div>
+        </div>
+      </section>
+
+      <section class="cs-section" aria-labelledby="cs-roadmap-title">
+        <div class="cs-section-head">
+          <div><span class="cs-overline">07 / Future goals</span><h3 id="cs-roadmap-title">What comes next</h3></div>
+          <p>Potential roadmap items, subject to development, testing, and validation.</p>
+        </div>
+        <div class="cs-roadmap-grid">
+          <div class="cs-roadmap-item">Improve enclosure design and mechanical coupling.</div>
+          <div class="cs-roadmap-item">Calibrate sensors and document repeatable tests.</div>
+          <div class="cs-roadmap-item">Strengthen power delivery and battery management.</div>
+          <div class="cs-roadmap-item">Improve Android monitoring and device management.</div>
+          <div class="cs-roadmap-item">Conduct reliability testing and safety validation.</div>
+          <div class="cs-roadmap-item">Explore productization and commercialization only after validation.</div>
+        </div>
+      </section>
+
+      <p class="cs-disclaimer"><strong>Prototype notice:</strong> CookSafe – LPG Guard is a working prototype under development, not a certified or commercially deployed safety product. No certified gas-tight closure, guaranteed detection accuracy, or production-grade reliability is claimed. Do not rely on this prototype as a replacement for approved safety equipment or practices.</p>
+    </div>
+  </section>
 </section>
 
 <!-- ===== THANK YOU ===== -->
@@ -1987,6 +2365,8 @@ body.light .back-to-top:hover {
             <li><a href="https://khanshafi5433.github.io/CloneMusic/">Spotify Clone</a></li>
             <li><a href="https://khanshafi5433.github.io/e-vote-realtime-system/">Election System</a></li>
             <li><a href="https://khanshafi5433.github.io/Flappy-Bird/">Flappy Bird</a></li>
+            <li><a href="#cooksafe-case-study">CookSafe – LPG Guard</a></li>
+            <li><a href="https://github.com/khan-shafi5433/MediCoreEnrollHub" target="_blank" rel="noopener noreferrer">MediCoreEnrollHub</a></li>
           </ul>
         </div>
       </div>
@@ -2052,7 +2432,7 @@ document.querySelectorAll('.mob-link').forEach(a => {
   a.addEventListener('click', () => toggleMenu(false));
 });
 
-const sections = document.querySelectorAll("section[id]");
+const sections = document.querySelectorAll("body > section[id]");
 const links    = document.querySelectorAll(".nav-links a, .toc-grid a");
 window.addEventListener("scroll", () => {
   let current = "";
